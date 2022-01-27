@@ -7,7 +7,7 @@ const HeroPage = () => (
     backgroundImage: 'url(/heroPicture1.jpg)',
     backgroundSize: 'cover',
     display: 'flex',
-    // flexDirection: 'column',
+    flexDirection: 'column',
     backgroundPosition: 'center',
     alignItems: 'center',
     justifyContent: 'center',
@@ -16,6 +16,15 @@ const HeroPage = () => (
     // mb: -6,
   }}
   >
+
+    {/* <Box>
+      <CardMedia
+        component="img"
+        height="390"
+        image="/static/images/cards/fight-night.png"
+        alt="conor"
+      />
+    </Box> */}
     <Box sx={{ width: { sm: '100%', md: '80%' } }}>
       <Typography display="block" variant="h2" align="center" color="common.white">
         UFC Fight Night: Hermansson vs. Strickland

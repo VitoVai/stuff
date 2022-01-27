@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Typography, Grid, Container, Box, Card, CardContent, CardMedia, CardActionArea,
 } from '@mui/material';
+import NewsColumn from './news-page/news-column';
 
 const NewsPage = () => (
   <Container>
@@ -80,34 +81,87 @@ const NewsPage = () => (
       </Grid>
     </Box>
 
-    <Box sx={{ flexGrow: 1, mt: 2 }}>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={2}
-      >
-        <Grid item xs={3}>
-          <CardMedia
-            sx={{ width: 128, height: 90, ml: 20 }}
-            component="img"
-            // height="190"
-            image="/static/images/cards/dana.png"
-            alt="dana-white"
+    <NewsColumn />
+    <NewsColumn />
+    <NewsColumn />
+    <NewsColumn />
+    <NewsColumn />
+    <NewsColumn />
 
-          />
+    <Box sx={{ mt: 6 }}>
+      <Grid container>
+        <Grid md={4} item>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="190"
+                image="/static/images/cards/standoff.png"
+                alt="gdana-white"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Lorem ipsum
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit hic culpa facilis, cupiditate dignissimos corporis vel exercitationem quae?
+
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid md={4} item>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="190"
+                image="/static/images/cards/sean.png"
+                alt="fight"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Lorem ipsum
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore vero nemo consequatur recusandae laborum sed facilis iure autem.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+
+        <Grid md={4} item>
+          <Card sx={{ maxWidth: 345 }}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                height="190"
+                image="/static/images/cards/trump.png"
+                alt="conor"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Lorem ipsum
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum aliquam recusandae beatae iste placeat dignissimos vero quae.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
 
         </Grid>
-        <Grid item xs={9}>
-          <Typography variant="body2" color="text.secondary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, illo voluptatibus beatae sunt blanditiis unde expedita a. Ea?
-
-          </Typography>
-        </Grid>
-
       </Grid>
     </Box>
+
+    <NewsColumn />
+    <NewsColumn />
+    <NewsColumn />
+    <NewsColumn />
+    <NewsColumn />
+    <NewsColumn />
 
   </Container>
 
