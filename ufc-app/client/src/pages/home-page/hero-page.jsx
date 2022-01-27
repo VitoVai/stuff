@@ -11,8 +11,9 @@ const HeroPage = () => (
     backgroundPosition: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '90vh',
+    height: '95vh',
     // width: '100vw',
+    // mb: -6,
   }}
   >
     <Box sx={{ width: { sm: '100%', md: '80%' } }}>

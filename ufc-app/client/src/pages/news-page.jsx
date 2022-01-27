@@ -14,29 +14,29 @@ const NewsPage = () => (
   <Container>
     <Box sx={{ mt: 3 }}>
       <Typography display="block" variant="h4" align="center" color="common.black">
-        UFC naujienos
+        Naujienos
 
       </Typography>
     </Box>
 
-    <Box sx={{ mt: 12 }}>
-      <Grid spacing={2} container>
+    <Box sx={{ mt: 6 }}>
+      <Grid container>
         <Grid md={4} item>
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="140"
-                image="/static/images/cards/contemplative-reptile.jpg"
-                alt="green iguana"
+                height="190"
+                image="/static/images/cards/dana.png"
+                alt="gdana-white"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Lorem ipsum
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, illo voluptatibus beatae sunt blanditiis unde expedita a. Ea?
+
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -47,17 +47,16 @@ const NewsPage = () => (
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="140"
-                image="/static/images/cards/contemplative-reptile.jpg"
-                alt="green iguana"
+                height="190"
+                image="/static/images/cards/cyril-francis.png"
+                alt="fight"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Lorem ipsum
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et quas iure sit enim consequuntur facilis. Temporibus, enim accusantium.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -68,17 +67,16 @@ const NewsPage = () => (
             <CardActionArea>
               <CardMedia
                 component="img"
-                height="140"
-                image="/static/images/cards/contemplative-reptile.jpg"
-                alt="green iguana"
+                height="190"
+                image="/static/images/cards/mcgregor.png"
+                alt="conor"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  Lizard
+                  Lorem ipsum
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  Lizards are a widespread group of squamate reptiles, with over 6,000
-                  species, ranging across all continents except Antarctica
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus corporis dolore laudantium cupiditate nesciunt, illum cum reiciendis eligendi?a
                 </Typography>
               </CardContent>
             </CardActionArea>
