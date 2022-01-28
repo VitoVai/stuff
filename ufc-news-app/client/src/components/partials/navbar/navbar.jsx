@@ -16,14 +16,16 @@ function ElevationScroll(props) {
 }
 
 const Navbar = () => (
-  <ElevationScroll>
-    <AppBar>
-      <Toolbar>
-        UFC
-      </Toolbar>
-    </AppBar>
+  <>
+    <ElevationScroll>
+      <AppBar>
+        <Toolbar>
+          UFC
+        </Toolbar>
+      </AppBar>
+    </ElevationScroll>
     <Toolbar />
-  </ElevationScroll>
+  </>
 
 );
 
