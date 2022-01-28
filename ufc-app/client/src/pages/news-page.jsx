@@ -8,7 +8,7 @@ const NewsPage = () => (
   <Container>
     <Box sx={{ mt: 3 }}>
       <Typography display="block" variant="h4" align="center" color="common.black">
-        Naujienos
+        NAUJIENOS
 
       </Typography>
     </Box>
