@@ -4,6 +4,7 @@ import {
 } from '@mui/material';
 import Lightweight from './rankings-page/lightweight';
 import Flyweight from './rankings-page/flyweight';
+import Bantamweight from './rankings-page/bantamwight';
 
 const RankingsPage = () => (
   <Container>
@@ -16,7 +17,7 @@ const RankingsPage = () => (
 
     <Box sx={{ mt: 6 }}>
       <Grid container>
-        <Grid md={4} item>
+        <Grid md={3} item>
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
               <CardMedia
@@ -38,46 +39,45 @@ const RankingsPage = () => (
             </CardActionArea>
           </Card>
 
-          <Typography variant="h5">
-
-            <Typography variant="h5" mt={2}>
-              2. Alexander Volkanovski
-            </Typography>
-            <Typography variant="h5" mt={2}>
-              3. Israel Adesanya
-            </Typography>
-            <Typography variant="h5" mt={2}>
-              4. Francis Ngannou
-            </Typography>
-            <Typography variant="h5" mt={2}>
-              5. Charles Oliveira
-            </Typography>
-            <Typography variant="h5" mt={2}>
-              6. Jon Jones
-            </Typography>
-            <Typography variant="h5" mt={2}>
-              7. Max Holloway
-            </Typography>
-            <Typography variant="h5" mt={2}>
-              8. Dustin Poirier
-            </Typography>
-            <Typography variant="h5" mt={2}>
-              9. Petr Yan
-            </Typography>
-            <Typography variant="h5" mt={2}>
-              10. Stipe Miocic
-            </Typography>
-            {/* <Typography variant="h5" mt={2}>
+          <Typography variant="h6" mt={2}>
+            2. Alexander Volkanovski
+          </Typography>
+          <Typography variant="h6" mt={2}>
+            3. Israel Adesanya
+          </Typography>
+          <Typography variant="h6" mt={2}>
+            4. Francis Ngannou
+          </Typography>
+          <Typography variant="h6" mt={2}>
+            5. Charles Oliveira
+          </Typography>
+          <Typography variant="h6" mt={2}>
+            6. Jon Jones
+          </Typography>
+          <Typography variant="h6" mt={2}>
+            7. Max Holloway
+          </Typography>
+          <Typography variant="h6" mt={2}>
+            8. Dustin Poirier
+          </Typography>
+          <Typography variant="h6" mt={2}>
+            9. Petr Yan
+          </Typography>
+          <Typography variant="h6" mt={2}>
+            10. Stipe Miocic
+          </Typography>
+          {/* <Typography variant="h5" mt={2}>
   11. Glover Teixeira
 </Typography> */}
 
-          </Typography>
-
         </Grid>
-        <Grid md={4} item>
+        <Grid md={3} item>
           <Flyweight />
         </Grid>
-        <Grid md={4} item>
+        <Grid md={3} item>
+          <Bantamweight />
+        </Grid>
+        <Grid md={3} item>
           <Lightweight />
         </Grid>
 

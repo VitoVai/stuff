@@ -3,7 +3,7 @@ import {
   Typography, Grid, Card, CardContent, CardMedia, CardActionArea,
 } from '@mui/material';
 
-const Flyweight = () => (
+const Bantamweight = () => (
 
   <Grid>
     <Card sx={{ maxWidth: 345 }}>
@@ -11,15 +11,15 @@ const Flyweight = () => (
         <CardMedia
           component="img"
           height="210"
-          image="/static/images/rankings/deiveson.png"
+          image="/static/images/rankings/aljamain.png"
           alt="usman"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" align="center">
-            DEIVESON FIGUEIREDO
+            ALJAMAIN STERLING
           </Typography>
           <Typography align="center" variant="body2" color="text.secondary">
-            FLYWEIGHT CHAMPION
+            BANTAMWEIGHT CHAMPION
 
           </Typography>
 
@@ -28,38 +28,38 @@ const Flyweight = () => (
     </Card>
 
     <Typography variant="h6" mt={2}>
-      1. Brandon Moreno
+      1. Petr Yan
     </Typography>
     <Typography variant="h6" mt={2}>
-      2. Askar Askarov
+      2. TJ Dillashaw
     </Typography>
     <Typography variant="h6" mt={2}>
-      3. Alexandre Pantoja
+      3. José Aldo
     </Typography>
     <Typography variant="h6" mt={2}>
-      4. Brandon Royval
+      4. Cory Sandhagen
     </Typography>
     <Typography variant="h6" mt={2}>
-      5. Alex Perez
+      5. Rob Font
     </Typography>
     <Typography variant="h6" mt={2}>
-      6. Kai Kara France
+      6. Merab Dvalishvili
     </Typography>
     <Typography variant="h6" mt={2}>
-      7. Rogerio Bontorin
+      7. Dominick Cruz
     </Typography>
     <Typography variant="h6" mt={2}>
-      8. Matheus Nicolau
+      8. Marlon Vera
     </Typography>
     <Typography variant="h6" mt={2}>
-      9. Matt Schnell
+      9. Pedro Munhoz
     </Typography>
     <Typography variant="h6" mt={2}>
-      10. David Dvorak
+      10. Marlon Moraes
     </Typography>
 
   </Grid>
 
 );
 
-export default Flyweight;
+export default Bantamweight;
