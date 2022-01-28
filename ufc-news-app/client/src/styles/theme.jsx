@@ -14,9 +14,11 @@ const theme = createTheme({
     },
   },
   typography: {
-    h6: {
-      fontWeight: 300,
+    tab: {
+      fontFamily: 'Merriweather',
+      marginLeft: '25px',
     },
+
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -32,7 +34,7 @@ const theme = createTheme({
   },
   mixins: {
     toolbar: {
-      minHeight: 63,
+      minHeight: 69,
     },
   },
 });

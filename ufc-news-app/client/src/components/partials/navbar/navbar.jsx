@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  AppBar, Toolbar, useScrollTrigger, Typography,
+  AppBar, Box, Toolbar, useScrollTrigger, Tabs, Tab,
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
@@ -27,6 +27,11 @@ const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
   },
+  tab: {
+    ...theme.typography.tab,
+    // textTransform: 'none',
+    // fontSize: '1rem',
+  },
 }));
 
 const Navbar = () => {
@@ -36,10 +41,30 @@ const Navbar = () => {
       <ElevationScroll>
         <AppBar position="static">
           <Toolbar>
-            <img src={logo} className={classes.logo} alt="UFC logo" />
-            <Typography variant="h6">
-              UFC
-            </Typography>
+            <Box sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              width: '100%',
+              alignItems: 'center',
+            }}
+            >
+              <Box sx={{ display: 'flex' }}>
+                <img src={logo} className={classes.logo} alt="UFC logo" />
+              </Box>
+              <Box>
+                <Tabs textColor="white">
+                  <Tab className={classes.tab} label="Pagrindinis" />
+                  <Tab className={classes.tab} label="Naujienos" />
+                  <Tab className={classes.tab} label="UFC reitingai" />
+                </Tabs>
+              </Box>
+              <Box>
+                <Tabs textColor="white">
+                  <Tab className={classes.tab} label="Prisijungti" />
+                </Tabs>
+              </Box>
+            </Box>
+
           </Toolbar>
         </AppBar>
       </ElevationScroll>
