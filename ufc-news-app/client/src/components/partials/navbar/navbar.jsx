@@ -4,6 +4,8 @@ import {
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
+import logo from '../../../assets/ufc-logo.png';
+
 function ElevationScroll(props) {
   const { children } = props;
 
@@ -19,6 +21,9 @@ function ElevationScroll(props) {
 }
 
 const useStyles = makeStyles((theme) => ({
+  logo: {
+    height: 'auto',
+  },
   toolbarMargin: {
     ...theme.mixins.toolbar,
   },
@@ -31,14 +36,14 @@ const Navbar = () => {
       <ElevationScroll>
         <AppBar position="static">
           <Toolbar>
+            <img src={logo} className={classes.logo} alt="UFC logo" />
             <Typography variant="h6">
               UFC
             </Typography>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
-      <Toolbar />
-      <div className={classes.toolbarMargin} />
+      {/* <div className={classes.toolbarMargin} /> */}
     </>
 
   );

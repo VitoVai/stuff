@@ -32,7 +32,7 @@ const theme = createTheme({
   },
   mixins: {
     toolbar: {
-      minHeight: 66,
+      minHeight: 63,
     },
   },
 });
