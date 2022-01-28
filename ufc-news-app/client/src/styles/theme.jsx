@@ -14,6 +14,9 @@ const theme = createTheme({
     },
   },
   typography: {
+    h6: {
+      fontWeight: 300,
+    },
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',

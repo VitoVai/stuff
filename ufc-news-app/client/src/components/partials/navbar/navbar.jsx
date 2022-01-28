@@ -1,5 +1,8 @@
 import React from 'react';
-import { AppBar, Toolbar, useScrollTrigger } from '@mui/material';
+import {
+  AppBar, Toolbar, useScrollTrigger, Typography,
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -15,18 +18,30 @@ function ElevationScroll(props) {
   });
 }
 
-const Navbar = () => (
-  <>
-    <ElevationScroll>
-      <AppBar>
-        <Toolbar>
-          UFC
-        </Toolbar>
-      </AppBar>
-    </ElevationScroll>
-    <Toolbar />
-  </>
+const useStyles = makeStyles((theme) => ({
+  toolbarMargin: {
+    ...theme.mixins.toolbar,
+  },
+}));
 
-);
+const Navbar = () => {
+  const classes = useStyles();
+  return (
+    <>
+      <ElevationScroll>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6">
+              UFC
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </ElevationScroll>
+      <Toolbar />
+      <div className={classes.toolbarMargin} />
+    </>
+
+  );
+};
 
 export default Navbar;
