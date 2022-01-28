@@ -18,6 +18,9 @@ const theme = createTheme({
       fontFamily: 'Merriweather',
       marginLeft: '25px',
     },
+    estimate: {
+      fontFamily: 'Merriweather',
+    },
 
     fontFamily: [
       '-apple-system',
