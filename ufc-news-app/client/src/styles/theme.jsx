@@ -1,28 +1,32 @@
 import { createTheme } from '@mui/material';
 
+const arcBlack = '#0C090A';
+const mainWhite = '#FFFFFF';
+
 const theme = createTheme({
   palette: {
+    common: {
+      blue: `${arcBlack}`,
+      white: `${mainWhite}`,
+    },
     primary: {
-      main: '#080806',
-      light: '#F5F5F5',
-      dark: '#FFFFFF',
-      border: '#F3F2ED',
+      main: `${arcBlack}`,
     },
     secondary: {
-      main: '#FFFFFF',
-      dark: '#2A3439',
+      main: `${mainWhite}`,
     },
   },
   typography: {
-    tab: {
-      fontFamily: 'Merriweather',
-      marginLeft: '25px',
-    },
+    // tab: {
+    //   fontFamily: 'Merriweather',
+    //   marginLeft: '25px',
+    // },
     estimate: {
       fontFamily: 'Merriweather',
     },
 
     fontFamily: [
+      'Merriweather',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',

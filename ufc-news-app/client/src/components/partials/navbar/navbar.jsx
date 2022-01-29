@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import {
   AppBar, Box, Button, Toolbar, useScrollTrigger, Tabs, Tab,
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
+import { makeStyles } from '@mui/styles';
 
 import logo from '../../../assets/ufc-logo.png';
 
@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   tab: {
     ...theme.typography.tab,
+    // color: 'yellow',
     // textTransform: 'none',
     // fontSize: '1rem',
   },
