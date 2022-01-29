@@ -28,16 +28,16 @@ const useStyles = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
   },
-  tab: {
-    ...theme.typography.tab,
-    // color: 'yellow',
-    // textTransform: 'none',
-    // fontSize: '1rem',
-  },
-  button: {
-    ...theme.typography.estimate,
-    borderRadius: '50px',
-  },
+  // tab: {
+  //   ...theme.typography.tab,
+  //   color: 'yellow',
+  //   textTransform: 'none',
+  //   fontSize: '1rem',
+  // },
+  // button: {
+  //   ...theme.typography.estimate,
+  //   borderRadius: '50px',
+  // },
 }));
 
 const Navbar = () => {
@@ -80,13 +80,13 @@ const Navbar = () => {
               </Box>
               <Box>
                 <Tabs value={value} onChange={handleChange} textColor="white" indicatorColor="secondary">
-                  <Tab className={classes.tab} component={Link} to="/" label="Pagrindinis" />
-                  <Tab className={classes.tab} component={Link} to="/naujienos" label="Naujienos" />
-                  <Tab className={classes.tab} component={Link} to="/reitingai" label="UFC reitingai" />
+                  <Tab component={Link} to="/" label="Pagrindinis" />
+                  <Tab component={Link} to="/naujienos" label="Naujienos" />
+                  <Tab component={Link} to="/reitingai" label="UFC reitingai" />
                 </Tabs>
               </Box>
               <Box>
-                <Button component={Link} to="/prisijungti" disableRipple onClick={() => setValue(0)} variant="contained" color="secondary" classname={classes.button}>
+                <Button component={Link} to="/prisijungti" disableRipple onClick={() => setValue(0)} variant="contained" color="secondary">
                   Login
                 </Button>
               </Box>
