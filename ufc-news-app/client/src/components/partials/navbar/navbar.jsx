@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {
-  AppBar, Box, Button, Toolbar, useScrollTrigger, Tabs, Tab,
+  AppBar, Box, Button, Toolbar, useScrollTrigger, Tabs, Tab, Menu, MenuItem,
 } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
@@ -38,14 +38,36 @@ const useStyles = makeStyles((theme) => ({
   //   ...theme.typography.estimate,
   //   borderRadius: '50px',
   // },
+  menu: {
+    backgroundColor: theme.palette.common.black,
+    color: 'white',
+  },
+  menuItem: {
+    ...theme.typography.tab,
+    opacity: 0.7,
+    '&:hover': {
+      opacity: 1,
+    },
+  },
 }));
 
 const Navbar = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState('one');
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [open, setOpen] = React.useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+    setOpen(false);
   };
 
   useEffect(() => {
@@ -73,23 +95,57 @@ const Navbar = () => {
             }}
             >
               <Box sx={{ display: 'flex' }}>
-                <Button component={Link} to="/" disableRipple onClick={() => setValue(0)}>
+                <Button
+                  component={Link}
+                  to="/"
+                  disableRipple
+                  onClick={() => setValue(0)}
+                >
                   <img src={logo} className={classes.logo} alt="UFC logo" />
                 </Button>
 
               </Box>
               <Box>
-                <Tabs value={value} onChange={handleChange} textColor="white" indicatorColor="secondary">
+                <Tabs value={value} onChange={handleChange} textColor="inherit" indicatorColor="secondary">
                   <Tab component={Link} to="/" label="Pagrindinis" />
                   <Tab component={Link} to="/naujienos" label="Naujienos" />
-                  <Tab component={Link} to="/reitingai" label="UFC reitingai" />
+                  <Tab
+                    aria-owns={anchorEl ? 'simple menu' : undefined}
+                    aria-haspopup={anchorEl ? 'true' : undefined}
+                    onMouseOver={(event) => handleClick(event)}
+                    component={Link}
+                    to="/reitingai"
+                    label="UFC reitingai"
+                  />
                 </Tabs>
               </Box>
               <Box>
-                <Button component={Link} to="/prisijungti" disableRipple onClick={() => setValue(0)} variant="contained" color="secondary">
+                <Button
+                  component={Link}
+                  to="/prisijungti"
+                  disableRipple
+                  onClick={() => setValue(0)}
+                  variant="contained"
+                  color="secondary"
+                >
                   Login
                 </Button>
               </Box>
+              <Menu
+                id="simple menu"
+                anchorEl={(anchorEl)}
+                open={open}
+                onClose={handleClose}
+                classes={{ paper: classes.menu }}
+                MenuListProps={{ onMouseLeave: handleClose }}
+                elevation={0}
+
+              >
+                <MenuItem onClick={() => { handleClose(); setValue(2); }} component={Link} to="/reitingai" classes={{ root: classes.menuItem }}>UFC reitingai</MenuItem>
+                <MenuItem onClick={() => { handleClose(); setValue(2); }} component={Link} to="/bypound" classes={{ root: classes.menuItem }}>By pound</MenuItem>
+                <MenuItem onClick={() => { handleClose(); setValue(2); }} component={Link} to="/flyweight" classes={{ root: classes.menuItem }}>Flyweight</MenuItem>
+                <MenuItem onClick={() => { handleClose(); setValue(2); }} component={Link} to="/middleweight" classes={{ root: classes.menuItem }}>Middleweight</MenuItem>
+              </Menu>
             </Box>
 
           </Toolbar>

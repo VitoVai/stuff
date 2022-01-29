@@ -1,26 +1,26 @@
 import { createTheme } from '@mui/material';
 
-const arcBlack = '#0C090A';
+const mainBlack = '#0C090A';
 const mainWhite = '#FFFFFF';
 
 const theme = createTheme({
   palette: {
     common: {
-      blue: `${arcBlack}`,
+      black: `${mainBlack}`,
       white: `${mainWhite}`,
     },
     primary: {
-      main: `${arcBlack}`,
+      main: `${mainBlack}`,
     },
     secondary: {
       main: `${mainWhite}`,
     },
   },
   typography: {
-    // tab: {
-    //   fontFamily: 'Merriweather',
-    //   marginLeft: '25px',
-    // },
+    tab: {
+      fontFamily: 'Merriweather',
+      // marginLeft: '25px',
+    },
     estimate: {
       fontFamily: 'Merriweather',
     },
