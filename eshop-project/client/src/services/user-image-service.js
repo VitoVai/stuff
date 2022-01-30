@@ -1,27 +1,44 @@
-import axios from 'axios';
-import AuthService from './auth-service';
+/* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
 
-const UserImageService = new (class ImageService {
-  constructor() {
-    this.requester = axios.create({
-      baseURL: 'http://localhost:5000/api/images',
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
+const initialState = {
+  loggedIn: null,
+  user: null,
+  redirectTo: null,
+};
 
-  async getUserImages() {
-    const token = AuthService.getToken();
-    if (!token) {
-      throw new Error('Can not get user images without authentication');
-    } else {
-      const { data } = await this.requester.get('/', {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      return data.images;
-    }
-  }
-})();
+const authSlice = createSlice({
+  name: 'auth',
+  initialState,
+  reducers: {
+    authFailed(state) {
+      state.loggedIn = false;
+    },
+    login(state, { payload }) {
+      state.loggedIn = true;
+      state.user = payload.user;
+      state.redirectTo = payload.redirectTo;
+    },
+    logout(state) {
+      state.loggedIn = false;
+      state.user = null;
+      state.redirectTo = null;
+    },
+    updateUser(state, { payload }) {
+      state.user = payload.user;
+    },
+  },
+});
 
-export default UserImageService;
+export const {
+  login,
+  logout,
+  authFailed,
+  updateUser,
+} = authSlice.actions;
+
+export const authSelector = (state) => state.auth;
+export const loggedInSelector = (state) => state.auth.loggedIn;
+export const userSelector = (state) => state.auth.user;
+
+export default authSlice.reducer;
