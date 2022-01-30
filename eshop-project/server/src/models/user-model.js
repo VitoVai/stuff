@@ -20,15 +20,18 @@ const userSchema = new Mongoose.Schema({
       { validator: (value) => value.length <= 32, message: 'Max 32 characters' },
       { validator: (value) => /^.*[0-9].*$/.test(value), message: 'At least one number' },
       { validator: (value) => /^.*[A-ZĄČĘĖĮŠŲŪŽ].*$/.test(value), message: 'At least one capital letter' },
-    ], 
+    ],
   },
   role: {
-    type: 'string', 
+    type: 'string',
     enum: ['USER', 'ADMIN'],
     default: 'USER',
   },
-  mainImg: { type: Mongoose.Schema.Types.ObjectId, ref: 'Image' },
-  images: [{ type: Mongoose.Schema.Types.ObjectId, ref: 'Image' }],
+  mainImg: {
+    type: Mongoose.Schema.Types.ObjectId,
+    ref: 'Image',
+    unique: true,
+  },
   name: {
     type: 'string',
     required: true,

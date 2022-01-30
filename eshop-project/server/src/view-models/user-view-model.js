@@ -1,12 +1,15 @@
+const ImageViewModel = require('./image-view-model');
+
 class UserViewModel {
-  constructor({ _id, email, role, name, surname, mainImg, images, createdAt, updatedAt }) {
+  constructor({ _id, email, role, name, surname, mainImg, createdAt, updatedAt }) {
     this.id = _id;
     this.email = email;
     this.role = role;
     this.name = name;
+    if (mainImg) {
+      this.mainImg = new ImageViewModel(mainImg);
+    }
     this.surname = surname;
-    this.mainImg = mainImg;
-    this.images = images;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
   }
