@@ -15,7 +15,7 @@ const mapRoutesRecursive = ({
 }) => {
   const Page = pageRouteEnum[pageName];
   if (childRoutes) {
-    // Route is LayoutComponent
+    // Route is LayoutComponent ()
     return (
       <Route key={pageName} path={path} element={<Page />}>
         {childRoutes.map(mapRoutesRecursive)}
